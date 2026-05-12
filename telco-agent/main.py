@@ -11,6 +11,8 @@ from agent import solve_question
 _ROOT = Path(__file__).resolve().parent
 SUBMISSION_CSV = os.getenv("SUBMISSION_CSV", str(_ROOT / "data" / "sample_submission.csv"))
 TEST_JSON = os.getenv("TEST_JSON", str(_ROOT / "data" / "Phase_2" / "test.json"))
+# Optional: CSV with columns ID,Track A — fills Track A for leaderboard rows (main.py only solves Track B).
+TRACK_A_CSV = os.getenv("TRACK_A_CSV", "").strip()
 
 
 def load_track_b_questions(test_data: list) -> dict[int | str, str]:
@@ -40,6 +42,17 @@ def main() -> None:
     print(f"[INFO] Submission template: {SUBMISSION_CSV}")
     print(f"[INFO] Questions JSON: {TEST_JSON}")
 
+    track_a_overrides: dict[str, str] = {}
+    if TRACK_A_CSV and Path(TRACK_A_CSV).exists():
+        ta_df = pd.read_csv(TRACK_A_CSV)
+        if "ID" not in ta_df.columns or "Track A" not in ta_df.columns:
+            raise ValueError(f"{TRACK_A_CSV} must have columns: ID, Track A")
+        for _, r in ta_df.iterrows():
+            tid = str(r["ID"]).strip()
+            v = r["Track A"]
+            track_a_overrides[tid] = "" if pd.isna(v) else str(v).strip()
+        print(f"[INFO] Loaded Track A overrides: {len(track_a_overrides)} rows from {TRACK_A_CSV}")
+
     track_b_questions = load_track_b_questions(test_data)
 
     print(f"[INFO] Found {len(track_b_questions)} Track B questions to solve")
@@ -65,13 +78,23 @@ def main() -> None:
     rows: list[dict[str, object]] = []
     for _, row in sample_df.iterrows():
         q_id = row["ID"]
+        qid_str = str(q_id).strip()
         track_a = row["Track A"] if pd.notna(row["Track A"]) else ""
+        if track_a_overrides and qid_str in track_a_overrides:
+            tv = track_a_overrides[qid_str]
+            if tv != "":
+                track_a = tv
         prev_b = (
             row["Track B"]
             if "Track B" in row.index and pd.notna(row["Track B"])
             else ""
         )
-        track_b = track_b_answers.get(q_id, prev_b)
+        track_b = (
+            track_b_answers.get(q_id)
+            or track_b_answers.get(str(q_id))
+            or track_b_answers.get(qid_str)
+            or prev_b
+        )
         rows.append({"ID": q_id, "Track A": track_a, "Track B": track_b})
 
     with open("result.csv", "w", newline="", encoding="utf-8") as f:
