@@ -1,0 +1,6 @@
+requests
+urllib3
+huggingface_hub
+openai
+python-dotenv
+pandas

@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "question": "Identify the fault for case 1.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 2,
+    "question": "List the affected interfaces for case 2.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 3,
+    "question": "What is the traffic path from host to core for case 3?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 4,
+    "question": "Identify the fault for case 4.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 5,
+    "question": "List the affected interfaces for case 5.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 6,
+    "question": "What is the traffic path from host to core for case 6?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 7,
+    "question": "Identify the fault for case 7.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 8,
+    "question": "List the affected interfaces for case 8.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 9,
+    "question": "What is the traffic path from host to core for case 9?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 10,
+    "question": "Identify the fault for case 10.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 11,
+    "question": "List the affected interfaces for case 11.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 12,
+    "question": "What is the traffic path from host to core for case 12?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 13,
+    "question": "Identify the fault for case 13.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 14,
+    "question": "List the affected interfaces for case 14.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 15,
+    "question": "What is the traffic path from host to core for case 15?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 16,
+    "question": "Identify the fault for case 16.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 17,
+    "question": "List the affected interfaces for case 17.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 18,
+    "question": "What is the traffic path from host to core for case 18?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 19,
+    "question": "Identify the fault for case 19.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 20,
+    "question": "List the affected interfaces for case 20.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 21,
+    "question": "What is the traffic path from host to core for case 21?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 22,
+    "question": "Identify the fault for case 22.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 23,
+    "question": "List the affected interfaces for case 23.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 24,
+    "question": "What is the traffic path from host to core for case 24?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 25,
+    "question": "Identify the fault for case 25.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 26,
+    "question": "List the affected interfaces for case 26.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 27,
+    "question": "What is the traffic path from host to core for case 27?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 28,
+    "question": "Identify the fault for case 28.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 29,
+    "question": "List the affected interfaces for case 29.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 30,
+    "question": "What is the traffic path from host to core for case 30?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 31,
+    "question": "Identify the fault for case 31.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 32,
+    "question": "List the affected interfaces for case 32.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 33,
+    "question": "What is the traffic path from host to core for case 33?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 34,
+    "question": "Identify the fault for case 34.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 35,
+    "question": "List the affected interfaces for case 35.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 36,
+    "question": "What is the traffic path from host to core for case 36?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 37,
+    "question": "Identify the fault for case 37.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 38,
+    "question": "List the affected interfaces for case 38.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 39,
+    "question": "What is the traffic path from host to core for case 39?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 40,
+    "question": "Identify the fault for case 40.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 41,
+    "question": "List the affected interfaces for case 41.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 42,
+    "question": "What is the traffic path from host to core for case 42?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 43,
+    "question": "Identify the fault for case 43.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 44,
+    "question": "List the affected interfaces for case 44.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 45,
+    "question": "What is the traffic path from host to core for case 45?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 46,
+    "question": "Identify the fault for case 46.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 47,
+    "question": "List the affected interfaces for case 47.",
+    "answer": "PE1_Ethernet1/0/22"
+  },
+  {
+    "id": 48,
+    "question": "What is the traffic path from host to core for case 48?",
+    "answer": "SH_FAC_PC01_eth01->PE1_Ethernet2/0/11->SH_AR_Ethernet1/0/11"
+  },
+  {
+    "id": 49,
+    "question": "Identify the fault for case 49.",
+    "answer": "PE1;Ethernet2/0/0;shutdown"
+  },
+  {
+    "id": 50,
+    "question": "List the affected interfaces for case 50.",
+    "answer": "PE1_Ethernet1/0/22"
+  }
+]
