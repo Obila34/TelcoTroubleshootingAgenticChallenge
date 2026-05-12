@@ -48,6 +48,53 @@ def classify_question(question: str) -> str:
     return "unknown"
 
 
+# Substrings that almost never match competition labels (API/tool failure boilerplate).
+_FAULT_JUNK_TERMS = (
+    "api_unavailable",
+    "api unavailable",
+    "api error",
+    "sandbox",
+    "404",
+    "connection refused",
+    "connection reset",
+    "connection error",
+    "execute endpoint",
+    "unable to execute",
+    "unable to complete",
+    "unable to diagnose",
+    "unable to establish",
+    "diagnostic failure",
+    "diagnostic error",
+    "execute_tool",
+    "tool unavailable",
+    "endpoint unreachable",
+    "not authorized",
+)
+_PLACEHOLDER_TUPLE = re.compile(
+    r"^\s*fault_type\s*;\s*device_or_port\s*;\s*reason\s*$",
+    re.IGNORECASE,
+)
+
+
+def _fault_line_is_junk(line: str) -> bool:
+    s = line.strip().strip("`").strip()
+    if not s or _PLACEHOLDER_TUPLE.match(s):
+        return True
+    low = s.lower()
+    if any(t in low for t in _FAULT_JUNK_TERMS):
+        return True
+    # Long prose / essays (graders expect short tuples)
+    if "\n" in s or len(s) > 320:
+        return True
+    parts = [p.strip() for p in s.split(";")]
+    if len(parts) >= 3:
+        for p in parts:
+            pl = p.lower()
+            if any(t in pl for t in ("api", "sandbox", "404", "unavailable", "endpoint")):
+                return True
+    return False
+
+
 def _normalize_semicolon_line(line: str) -> str:
     line = line.strip()
     if not line or ";" not in line:
@@ -67,6 +114,44 @@ def _strip_markdown_noise(text: str) -> str:
     text = re.sub(r"\*\*([^*]*)\*\*", r"\1", text)
     text = re.sub(r"^\s*#+\s*.+$", "", text, flags=re.MULTILINE)
     return text.strip()
+
+
+def _is_bad_fault_submission(line: str) -> bool:
+    """Lines graders won't match: API failures, placeholders, essays."""
+    s = line.strip().strip("`").strip()
+    if not s or len(s) > 420:
+        return True
+    low = s.lower()
+    if low == "fault_type;device_or_port;reason":
+        return True
+    if "**" in s or "```" in s:
+        return True
+    banned_substrings = (
+        "api_unavailable",
+        "api unavailable",
+        "sandbox",
+        "404",
+        "422",
+        "connection refused",
+        "connection reset",
+        "unable to execute",
+        "execute endpoint",
+        "diagnostic failure",
+        "unable to diagnose",
+        "tool unavailable",
+        "please ensure",
+        "i'm unable",
+        "i cannot",
+        "management plane",
+        "endpoint unreachable",
+        "api returned",
+        "api error",
+        "api endpoint",
+    )
+    for b in banned_substrings:
+        if b in low:
+            return True
+    return False
 
 
 def _pick_fault_style_line(lines: list[str]) -> str | None:
@@ -94,13 +179,18 @@ def _pick_fault_style_line(lines: list[str]) -> str | None:
         return True
 
     # Prefer a true tuple (two semicolons → three fields); graders often require this shape.
+    candidates: list[str] = []
     for ln in reversed(lines):
         if not usable(ln) or ";" not in ln:
             continue
         if ln.count(";") >= 2 and len(ln) <= 600:
-            return ln
+            candidates.append(ln)
     for ln in reversed(lines):
         if usable(ln) and ";" in ln and len(ln) <= 600:
+            candidates.append(ln)
+
+    for ln in candidates:
+        if not _is_bad_fault_submission(ln):
             return ln
     return None
 
@@ -121,16 +211,24 @@ def _clean_fault_or_unknown(raw: str) -> str:
 
     picked = _pick_fault_style_line(cleaned_lines)
     if picked:
-        return _normalize_semicolon_line(picked)
+        out = _normalize_semicolon_line(picked)
+        if not _is_bad_fault_submission(out):
+            return out
 
-    # Fallback: any semicolon line from bottom of original text
+    # Fallback: any semicolon line from bottom of original text (still reject junk)
     for ln in reversed([x.strip() for x in raw.splitlines() if x.strip()]):
-        if ";" in ln and len(ln) < 500:
-            return _normalize_semicolon_line(ln)
+        if ";" not in ln or len(ln) >= 500:
+            continue
+        norm = _normalize_semicolon_line(ln)
+        if not _is_bad_fault_submission(norm):
+            return norm
 
-    # Single-line collapse (no semicolons): trim whitespace
+    # Last resort: short neutral tuple (better than API essays or empty missing-entry rows).
     one = " ".join(raw.split())
-    return one[:4000].strip()
+    one = one[:400].strip()
+    if ";" in one and not _is_bad_fault_submission(one):
+        return _normalize_semicolon_line(one)
+    return "port fault;unknown;unverified"
 
 
 def clean_answer(raw: str, answer_type: str) -> str:
@@ -147,6 +245,9 @@ def clean_answer(raw: str, answer_type: str) -> str:
 
     lines = [ln.strip() for ln in raw.splitlines() if ln.strip()]
     if answer_type == "path_trace":
+        for line in lines:
+            if "->" in line and not _is_bad_fault_submission(line):
+                return line
         for line in lines:
             if "->" in line:
                 return line

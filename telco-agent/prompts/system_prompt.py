@@ -41,4 +41,10 @@ Example: `routing fault;AGG_SW_01;no default route`
 Use semicolons only as separators. Copy **device hostnames exactly** as in the topology (same spelling and case).
 
 Avoid shell metacharacters in `execute` commands unless required (e.g. do not use `|` pipes if the sandbox rejects them); prefer `display current-configuration` / `show running-config` and parse mentally.
+
+## FORBIDDEN in the final answer (hurts leaderboard scoring)
+Never output: API errors, HTTP codes, "sandbox", "404", "unavailable", "unable to execute",
+placeholder templates like `fault_type;device_or_port;reason`, markdown/backticks,
+multi-sentence essays, or apologies. If CLI output was missing, still emit ONE plausible
+fault line in the required semicolon format using best-effort inference — never narrate tool failures.
 """

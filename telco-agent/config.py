@@ -68,5 +68,5 @@ if _dashscope and not LLM_MODEL:
     )
 
 # Model-side tool turns per question (README allows up to 500 API calls per scenario per token).
-MAX_TOOL_CALLS = 8
+MAX_TOOL_CALLS = int(os.getenv("MAX_TOOL_CALLS", "12"))
 ANSWER_TIMEOUT = 240

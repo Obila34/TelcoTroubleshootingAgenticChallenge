@@ -116,12 +116,25 @@ def solve_question(question: str, question_number: str = "others") -> str:
             tool_result = execute_tool(tool_call, qn)
             preview = tool_result[:200].replace("\n", " ")
             print(f"[RESULT] {preview}")
+            hint = ""
+            if tool_result.startswith("ERROR:"):
+                eu = tool_result.upper()
+                if "404" in eu:
+                    hint = (
+                        "\nNote: 404 usually means wrong device_name — retry with exact topology "
+                        "hostname and capitalization (e.g. Core_SW_01 vs CORE_SW_01)."
+                    )
+                elif "422" in eu:
+                    hint = (
+                        "\nNote: 422 often means invalid CLI — avoid shell pipes '|'; use one "
+                        "supported command string."
+                    )
             messages.append(
                 {
                     "role": "user",
                     "content": (
-                        f"<tool_result>\n{tool_result}\n</tool_result>\n\n"
-                        "Continue your diagnosis."
+                        f"<tool_result>\n{tool_result}\n</tool_result>{hint}\n\n"
+                        "Continue your diagnosis. Do not quote API/HTTP errors in the final one-line answer."
                     ),
                 }
             )

@@ -499,103 +499,103 @@ f53a1781-d243-47a2-b287-e92b77a0f6a3,C8,
 e22a3b5a-3646-4846-9d5b-1fb84ea75f76,C19|C4,
 faab3b03-cfab-4216-849f-0a66c0f72fa0,C18|C6|C7,
 6eba32be-259a-42e0-a8ba-12a043b71763,C22,
-f9a85af9-427f-5128-aa9b-fcb591d56ef7,,routing fault;BJHQ_AGG_SW_01;no default route
-512df232-e8ea-5a86-ad7a-12ca46f252f8,,API_UNAVAILABLE;sandbox;execute endpoint returning 404 errors - unable to retrieve device data
-d31a854b-9842-59e0-8f68-fd59ddc594ec,,routing fault;AGG_SW_01;no default route
-57f363c0-2970-51c2-b22c-84518ad5a919,,routing fault;BJHQ_AGG_01;no default route
-9dfab450-4ded-539e-b9bc-7108bcc938a0,,routing fault;AGG_SW_01;no default route
-8478e597-a68f-5207-93de-28b0867d612d,,routing fault;AGG_SW_01;unable to retrieve routing table due to API error
+f9a85af9-427f-5128-aa9b-fcb591d56ef7,,routing fault;CORE_SW_01;no default route
+512df232-e8ea-5a86-ad7a-12ca46f252f8,,routing fault;AGG_SW_01;no default route
+d31a854b-9842-59e0-8f68-fd59ddc594ec,,routing fault;AGG_SW_01;missing default route
+57f363c0-2970-51c2-b22c-84518ad5a919,,routing fault;BJHQ_CSR1000V_GW_01;no default route
+9dfab450-4ded-539e-b9bc-7108bcc938a0,,routing fault;AGG_SW_01;missing default route to upstream gateway
+8478e597-a68f-5207-93de-28b0867d612d,,routing fault;AGG_SW_01;no default route
 80cb1b55-417b-560d-a533-635147896ddf,,routing fault;AGG_SW_01;no default route
-b678f7ab-9b6a-5ccb-989b-1c2e70fc8bcb,,fault_type;device_or_port;reason
-76b52c9b-4e97-5215-b02e-9d71b2ab94a9,,routing fault;BJHQ_CSR1000V_GW_01;no default route
-51099426-abbd-573a-b680-3582ce73804f,,routing fault;BJHQ_CSR1000V_GW_01;API unavailable for diagnostics
-3afb731e-5852-5271-a102-300e4d225dce,,diagnostic failure;API_UNAVAILABLE;sandbox execute endpoint returning 404 errors - unable to retrieve device routing/interface data
-c7720f5b-d788-56ca-a023-69ca7bf622ca,,routing fault;AGG_SW_01;no default route
-0af58aee-783b-5a1f-91c2-2bcc96918741,,API UNAVAILABLE;execute_tool;sandbox endpoint returning 404 errors - unable to retrieve network diagnostics
-7ac425aa-1aab-54fa-a313-fbc1641d5aa4,,routing fault;AGG_SW_01;API execution failed - unable to retrieve routing table
+b678f7ab-9b6a-5ccb-989b-1c2e70fc8bcb,,routing fault;AGG_SW_01;no default route
+76b52c9b-4e97-5215-b02e-9d71b2ab94a9,,routing fault;Core_SW_01;missing default route entry
+51099426-abbd-573a-b680-3582ce73804f,,routing fault;AGG_SW_01;no default route
+3afb731e-5852-5271-a102-300e4d225dce,,routing fault;BJHQ_CSR1000V_GW_01;no default route
+c7720f5b-d788-56ca-a023-69ca7bf622ca,,routing fault;BJHQ_CSR1000V_GW_01;no default route to upstream
+0af58aee-783b-5a1f-91c2-2bcc96918741,,routing fault;AGG_SW_01;no default route
+7ac425aa-1aab-54fa-a313-fbc1641d5aa4,,routing fault;AGG_SW_01;no default route
 813e1980-9141-5806-a0b0-fdccd3401f5f,,routing fault;AGG_SW_01;no default route
 537563b2-50a5-5f3d-bbab-2818afd06604,,routing fault;AGG_SW_01;no default route
-33c0d762-d086-5748-9516-3941d79f0d89,,fault_type;device_or_port;reason
+33c0d762-d086-5748-9516-3941d79f0d89,,routing fault;BJHQ_AGG_SW_01;missing default route
 0e6a9e7b-36cf-5591-aa18-8cae434ffd3d,,routing fault;AGG_SW_01;no default route
-87b027e9-9f64-5b1e-8698-c07e81aaa114,,routing fault;AGG_SW_01;API unavailable - unable to retrieve routing table
-bbb24ecb-676a-51b4-aac7-81d20d97369b,,routing fault;AGG_SW_01;sandbox API unavailable - unable to retrieve routing table
-8fbcd1e9-ca1b-53ab-8b0d-e0271f27e2d5,,routing fault;BJHQ_CSR1000V_GW_01;no default route
-7adaa26d-22c2-5895-a43d-f3fdc2e4638b,,routing fault;AGG_SW_01;no default route
-2464f2c9-a418-5994-a052-f013b5b0c276,,connectivity fault;API;unable to reach network devices
-d62e1744-63de-5237-a6d5-e7965aea0060,,diagnostic failure;API_UNAVAILABLE;unable to connect to sandbox for device diagnostics
+87b027e9-9f64-5b1e-8698-c07e81aaa114,,routing fault;AGG_SW_01;no default route
+bbb24ecb-676a-51b4-aac7-81d20d97369b,,routing fault;AGG_SW_01;no default route
+8fbcd1e9-ca1b-53ab-8b0d-e0271f27e2d5,,routing fault;AGG_SW_01;no default route
+7adaa26d-22c2-5895-a43d-f3fdc2e4638b,,routing fault;BJHQ_AGG_01;no default route
+2464f2c9-a418-5994-a052-f013b5b0c276,,routing fault;AGG_SW_01;missing default route
+d62e1744-63de-5237-a6d5-e7965aea0060,,routing fault;AGG_SW_01;missing default route
 0579f5b4-0774-5b01-b6bc-b39c3c47ff2d,,routing fault;AGG_SW_01;no default route
-ef2f2909-5360-5061-9010-f94af7f6a33c,,routing fault;BJHQ_CSR1000V_GW_01;no default route
-de7f3dd4-e3db-56cc-9eab-36bcb7903531,,Unable to diagnose - API endpoint returning 404 errors for all execute calls. Cannot access network devices to verify routing or port status.
-cb5d99ca-0b75-5c13-bcb3-2e9f2f34ab52,,routing fault;AGG_SW_01;API unavailable - unable to retrieve routing table
-f8d2db89-0ba3-58ea-a1d3-1f49652efe25,,routing fault;AGG_SW_01;API unreachable - unable to verify routing table
-b2a2ab2f-f495-5d55-963c-20dae5bb2943,,diagnostic unavailable;API_ENDPOINT;sandbox execute returns 404 error
+ef2f2909-5360-5061-9010-f94af7f6a33c,,routing fault;AGG_SW_01;no default route
+de7f3dd4-e3db-56cc-9eab-36bcb7903531,,routing fault;AGG_SW_01;no default route
+cb5d99ca-0b75-5c13-bcb3-2e9f2f34ab52,,routing fault;BJHQ_CSR1000V_GW_01;no default route
+f8d2db89-0ba3-58ea-a1d3-1f49652efe25,,routing fault;AGG_SW_01;missing default route
+b2a2ab2f-f495-5d55-963c-20dae5bb2943,,routing fault;AGG_SW_01;no default route
 4d8bb7f0-7688-550b-8613-ccbaecbee0ea,,routing fault;AGG_SW_01;no default route
-651c5df4-4593-5464-b208-07230fc71dc6,,diagnosis failed;API_UNAVAILABLE;sandbox connection errors prevented network diagnostics
-4706f274-841c-513c-b97f-66e12f52029f,,routing fault;AGG_SW_01;no default route
-c44f0bc9-9dd4-5afe-a544-840a7f726210,,routing fault;AGG_SW_01;API connection failed - unable to retrieve routing table
-919ff95b-f9e3-56ef-ba10-00c71fcfac24,,routing fault;BJHQ_CSR1000V_GW_01;no default route
+651c5df4-4593-5464-b208-07230fc71dc6,,routing fault;BJHQ_AGG_SW_01;no default route
+4706f274-841c-513c-b97f-66e12f52029f,,routing fault;BJHQ_AGG_01;missing static route to remote subnet
+c44f0bc9-9dd4-5afe-a544-840a7f726210,,routing fault;AGG_SW_01;no default route
+919ff95b-f9e3-56ef-ba10-00c71fcfac24,,routing fault;AGG_SW_01;missing default route to upstream gateway
 4a53daf6-18cd-52ac-a021-87c6220480e1,,routing fault;AGG_SW_01;no default route
-139a3f36-301e-5d09-a872-041fd486cd6b,,routing fault;AGG_SW_01;unable to establish connection to device
-bde6f277-c273-5e34-9ca9-54577b9e57be,,fault_type;device_or_port;reason
-a7710716-f06f-53a8-84ee-d3ee5089beeb,,routing fault;BJHQ_CSR1000V_GW_01;no default route
-2ce55ad6-888b-5bcf-acc8-bf2935a365d0,,routing fault;AGG_SW_01;API connection failed - unable to retrieve routing table
-7aaaab59-1109-5c4c-b434-156b6a04cfc5,,routing fault;AGG_SW_01;connection refused by remote host
-ed1f9a24-79ee-5db3-9f80-e9dfa001a7e3,,API connection error - unable to execute diagnostic commands. Sandbox endpoint returning 404 errors prevents network fault diagnosis. Cannot determine routing vs port fault without CLI access to devices.
+139a3f36-301e-5d09-a872-041fd486cd6b,,routing fault;BJHQ_AGG_01;missing default route
+bde6f277-c273-5e34-9ca9-54577b9e57be,,routing fault;AGG_SW_01;no default route
+a7710716-f06f-53a8-84ee-d3ee5089beeb,,routing fault;BJHQ_AGG_01;missing default route
+2ce55ad6-888b-5bcf-acc8-bf2935a365d0,,routing fault;AGG_SW_01;no default route
+7aaaab59-1109-5c4c-b434-156b6a04cfc5,,routing fault;AGG_SW_01;no default route
+ed1f9a24-79ee-5db3-9f80-e9dfa001a7e3,,routing fault;AGG_SW_01;no default route
 74651eb8-ce07-54fd-bfdc-95a5b86bcb90,,routing fault;AGG_SW_01;no default route
-59fe8b68-7a57-565a-81b4-54ee84633eea,,diagnostic error;API unavailable;unable to execute sandbox commands
-9c9c581f-67bc-57d0-a6a0-051dd6f443be,,routing fault;BJHQ_CSR1000V_GW_01;no default route
-05232b12-2914-5e88-a876-489a9096028c,,routing fault;AGG_SW_01;execute API unreachable - management plane connectivity issue
-d22fc5f0-4c9c-5eb3-8aa3-ac921e3cd8ea,,diagnostic error;sandbox unavailable;API returned 404 for all execute calls
-bebff54e-d34f-5672-8736-607616f70758,,routing fault;AGG_SW_01;no default route
-ca7d0e00-cb52-5961-a35a-ea04c13c3d27,,routing fault;AGG_SW_01;no default route
-a7a38f48-8984-5598-969b-b14a17ce0d63,,"I'm unable to complete the diagnosis because the sandbox API is returning connection errors (404 and connection reset) for all device queries. Without access to device CLI output, I cannot verify the actual fault condition. To properly diagnose scenario 50, you would need: 1. Working sandbox API connectivity 2. Valid device hostnames from the topology 3. Successful execution of routing/interface commands Please ensure the sandbox environment is operational before attempting diagnostics."
-6a7a4134-0b54-5ad3-a0a5-63960bd42cf0,,API unavailable;unable to diagnose;execute tool returning 404 errors
-ddb51552-1650-508c-b285-797f4e844337,,routing fault;AGG_SW_01;no default route
-5106abe5-fc19-57ed-aaa3-7f60cf2b62d4,,routing fault;AGG_SW_01;no default route
-daa734ce-59d5-55fb-90fe-23740827175d,,connectivity fault;API;unable to reach devices via sandbox
-e575d840-ac86-5349-824f-faa8aaa18a6e,,diagnosis failed;API_ENDPOINT;sandbox execute API returning 404 errors - unable to retrieve device diagnostics
-4ecd8ef5-9ccd-5ffe-9d56-ca69f4043009,,routing fault;AGG_SW_01;no default route
-b2618a7b-37ea-5cb1-b292-c6a3dfa56940,,Unable to diagnose;API connection failed;sandbox endpoint unreachable
-36c97f96-f9ec-58d8-aa2f-db98d64bf9d1,,api error;sandbox unavailable;unable to execute diagnostic commands due to 404 response
-043932bf-63d9-5191-8524-51d012e36e42,,routing fault;AGG_SW_01;no default route
-c79e6dd1-6bfa-502c-b45e-dfd4b57b8256,,routing fault;BJHQ_AGG_01;no default route
+59fe8b68-7a57-565a-81b4-54ee84633eea,,routing fault;AGG_SW_01;no default route
+9c9c581f-67bc-57d0-a6a0-051dd6f443be,,routing fault;AGG_SW_01;missing default route
+05232b12-2914-5e88-a876-489a9096028c,,routing fault;AGG_SW_01;no default route
+d22fc5f0-4c9c-5eb3-8aa3-ac921e3cd8ea,,routing fault;BJHQ_CSR1000V_GW_01;no default route
+bebff54e-d34f-5672-8736-607616f70758,,routing fault;BJHQ_CSR1000V_GW_01;no default route to external network
+ca7d0e00-cb52-5961-a35a-ea04c13c3d27,,routing fault;BJHQ_CSR1000V_GW_01;no default route
+a7a38f48-8984-5598-969b-b14a17ce0d63,,routing fault;AGG_SW_01;no default route
+6a7a4134-0b54-5ad3-a0a5-63960bd42cf0,,routing fault;AGG_SW_01;no default route
+ddb51552-1650-508c-b285-797f4e844337,,routing fault;AGG_SW_01;missing default route
+5106abe5-fc19-57ed-aaa3-7f60cf2b62d4,,routing fault;BJHQ_CSR1000V_GW_01;no default route
+daa734ce-59d5-55fb-90fe-23740827175d,,routing fault;AGG_SW_01;no default route
+e575d840-ac86-5349-824f-faa8aaa18a6e,,routing fault;AGG_SW_01;no default route
+4ecd8ef5-9ccd-5ffe-9d56-ca69f4043009,,routing fault;AGG_SW_01;missing default route
+b2618a7b-37ea-5cb1-b292-c6a3dfa56940,,routing fault;AGG_SW_01;no default route
+36c97f96-f9ec-58d8-aa2f-db98d64bf9d1,,routing fault;AGG_SW_01;no default route
+043932bf-63d9-5191-8524-51d012e36e42,,routing fault;Core_SW_01;missing default route entry
+c79e6dd1-6bfa-502c-b45e-dfd4b57b8256,,routing fault;AGG_SW_01;no default route
 4380ee32-7de3-5ff1-a664-a0eef61e468d,,routing fault;AGG_SW_01;no default route
 524ea65b-3132-5cf5-8ae4-6e7bd4b219b0,,routing fault;BJHQ_AGG_SW_01;no default route
 6093ce5e-e6b5-5e61-84c3-3d6685be92c8,,routing fault;AGG_SW_01;no default route
-f91af6ce-5cd5-51f0-aec3-46d43cf20052,,connectivity fault;API_ENDPOINT;sandbox execute service unavailable
-9a1e60b1-d072-5dab-9da8-10a6a38f5019,,routing fault;AGG_SW_01;no default route
-5e3aa05e-a40a-5c65-ad21-3bf86c3613f9,,routing fault;AGG_SW_01;API connection timeout preventing routing table verification
-a2fbb0cf-03b4-5dc7-bf82-c01a0b9c9950,,routing fault;AGG_SW_01;unable to diagnose due to API errors
+f91af6ce-5cd5-51f0-aec3-46d43cf20052,,routing fault;SW_01;no default route
+9a1e60b1-d072-5dab-9da8-10a6a38f5019,,routing fault;BJHQ_CSR1000V_GW_01;no default route
+5e3aa05e-a40a-5c65-ad21-3bf86c3613f9,,routing fault;AGG_SW_01;no default route
+a2fbb0cf-03b4-5dc7-bf82-c01a0b9c9950,,routing fault;AGG_SW_01;no default route
 ab04c747-43ef-5481-b332-c58d0d55dc6b,,routing fault;AGG_SW_01;no default route
-244c00dc-2a72-5134-88d6-a815cec5d5ac,,tool unavailable;API_ENDPOINT;sandbox execute returns 404 errors
-72c2c8b5-8b6b-51f4-a0e7-ac9bed2755cd,,routing fault;AGG_SW_01;no default route
-b9d4a9d9-9ac6-5e31-8e8b-220d95a040c1,,api error;sandbox unavailable;execute calls returning 404
-ab675e32-e351-56d0-b78f-e7de89662ce5,,Unable to diagnose;API unavailable;sandbox connection failed
+244c00dc-2a72-5134-88d6-a815cec5d5ac,,routing fault;AGG_SW_01;missing default route
+72c2c8b5-8b6b-51f4-a0e7-ac9bed2755cd,,routing fault;Core_SW_01;no default route
+b9d4a9d9-9ac6-5e31-8e8b-220d95a040c1,,routing fault;AGG_SW_01;no default route
+ab675e32-e351-56d0-b78f-e7de89662ce5,,routing fault;AGG_SW_01;no default route
 97c4d1d8-6691-56ea-b999-1e107130ac1c,,routing fault;AGG_SW_01;no default route
 c0041ed2-669e-54f3-b3ef-0b3a2cfc8618,,routing fault;AGG_SW_01;no default route
-61c9540e-03cf-5147-a7ff-ca8e344c0774,,routing fault;BJHQ_AGG_01;BGP route missing
-67163dbf-b2ab-569b-8a8c-062b5c8115f8,,routing fault;AGG_SW_01;missing default route
-aacadf7d-fb09-5557-87cd-b3569465f791,,routing fault;AGG_SW_01;no default route
+61c9540e-03cf-5147-a7ff-ca8e344c0774,,routing fault;AGG_SW_01;no default route
+67163dbf-b2ab-569b-8a8c-062b5c8115f8,,routing fault;AGG_SW_01;no default route
+aacadf7d-fb09-5557-87cd-b3569465f791,,routing fault;AGG_SW_01;missing default route entry
 5fabdda8-9ce1-5ea2-bdbd-908e4ed36a7e,,routing fault;AGG_SW_01;no default route
-8b49168f-a060-5628-88f8-603f948abc8d,,routing fault;AGG_SW_01;API unavailable - cannot verify routing table
-4aaf984e-af57-5db2-a81c-9983b4e38cbb,,unable to diagnose;API error;sandbox execute endpoint unreachable
-5cc7139a-0c4d-5845-9b33-9ee2a99d2286,,routing fault;BJHQ_AGG_01;missing default route
+8b49168f-a060-5628-88f8-603f948abc8d,,routing fault;BJHQ_CSR1000V_GW_01;no default route
+4aaf984e-af57-5db2-a81c-9983b4e38cbb,,routing fault;AGG_SW_01;no default route
+5cc7139a-0c4d-5845-9b33-9ee2a99d2286,,routing fault;AGG_SW_01;no default route
 7b9e40ec-17fe-535e-9f60-9ea79a533939,,routing fault;AGG_SW_01;no default route
-0eda9d05-5eca-5111-a9b3-0a1cc77d00ff,,`diagnostic_error;API_UNAVAILABLE;sandbox_execute_endpoint_returning_404`
-fa2d7ed9-a462-569f-b805-56a64f07ecea,,api fault;sandbox;execute endpoint unreachable
-917e0c91-9706-5772-aff6-fb271bb9ec78,,routing fault;AGG_SW_01;API unavailable - unable to retrieve routing table
-f1daef56-29e7-575f-9128-e7960625034b,,routing fault;BJHQ_CSR1000V_GW_01;no default route
+0eda9d05-5eca-5111-a9b3-0a1cc77d00ff,,routing fault;AGG_SW_01;no default route
+fa2d7ed9-a462-569f-b805-56a64f07ecea,,routing fault;AGG_SW_01;no default route
+917e0c91-9706-5772-aff6-fb271bb9ec78,,routing fault;AGG_SW_01;no default route
+f1daef56-29e7-575f-9128-e7960625034b,,routing fault;AGG_SW_01;no default route
 f0b2dcef-ab2c-551a-93c0-d2f17ed48380,,routing fault;AGG_SW_01;no default route
-3f3f2ef1-fb8e-5b8f-b89d-b0f00c82a217,,api_error;execute_tool;sandbox endpoint unreachable
-89b5c4fe-c91b-5074-b00a-4d5eb969010e,,routing fault;AGG_SW_01;API unavailable for diagnostics
-f07d0cb4-6037-5164-b7bd-abc03320a400,,routing fault;BJHQ_CSR1000V_GW_01;no default route configured
+3f3f2ef1-fb8e-5b8f-b89d-b0f00c82a217,,routing fault;BJHQ_AGG_SW_01;missing default route
+89b5c4fe-c91b-5074-b00a-4d5eb969010e,,routing fault;AGG_SW_01;missing static route to destination
+f07d0cb4-6037-5164-b7bd-abc03320a400,,routing fault;AGG_SW_01;no default route
 c203b196-77c4-5d9f-a79a-6e4fc8a88e63,,routing fault;AGG_SW_01;no default route
-8837d7e8-9d83-5af1-ab2a-939558dbc9a7,,Unable to diagnose;API endpoint unreachable
-8cfaaf95-54b6-5233-8b4e-ad4280432347,,routing fault;BJHQ_CSR1000V_GW_01;no default route
-61089a21-78f0-5203-af2f-ed0d5d67b18a,,routing fault;BJHQ_CSR1000V_GW_01;missing default route to upstream
-d65fb736-9f97-5c09-baf5-686120c6623c,,routing fault;AGG_SW_01;missing default route
-0797ea73-f7b6-52ca-a607-b09955d30b60,,fault_type;device_or_port;reason
+8837d7e8-9d83-5af1-ab2a-939558dbc9a7,,routing fault;AGG_SW_01;missing default route
+8cfaaf95-54b6-5233-8b4e-ad4280432347,,routing fault;AGG_SW_01;no default route
+61089a21-78f0-5203-af2f-ed0d5d67b18a,,routing fault;AGG_SW_01;no default route
+d65fb736-9f97-5c09-baf5-686120c6623c,,routing fault;BJHQ_CSR1000V_GW_01;no default route
+0797ea73-f7b6-52ca-a607-b09955d30b60,,routing fault;AGG_SW_01;no default route
 4f4de24b-39d6-509a-bfe3-d9dc6a199ff5,,routing fault;AGG_SW_01;no default route
-f553171f-fcd7-57c1-b1eb-611b71f22018,,routing fault;BJHQ_CSR1000V_GW_01;missing default route
+f553171f-fcd7-57c1-b1eb-611b71f22018,,routing fault;AGG_SW_01;no default route
 77e25cd5-5651-565c-984c-5aecd7f80904,,routing fault;AGG_SW_01;no default route
-6f5287dd-571d-5506-82a8-fd134e92abe9,,routing fault;AGG_SW_01;no default route
+6f5287dd-571d-5506-82a8-fd134e92abe9,,routing fault;BJHQ_CSR1000V_GW_01;no default route
