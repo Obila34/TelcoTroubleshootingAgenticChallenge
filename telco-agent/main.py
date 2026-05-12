@@ -9,8 +9,15 @@ from agent import solve_question
 
 # Official Zindi template + questions path (override via env when submitting).
 _ROOT = Path(__file__).resolve().parent
-SUBMISSION_CSV = os.getenv("SUBMISSION_CSV", str(_ROOT / "data" / "sample_submission.csv"))
-TEST_JSON = os.getenv("TEST_JSON", str(_ROOT / "data" / "Phase_2" / "test.json"))
+# Defaults align official Zindi sample (Downloads copy → data/official_sample_submission.csv) + UUID-keyed Track B list.
+SUBMISSION_CSV = os.getenv(
+    "SUBMISSION_CSV",
+    str(_ROOT / "data" / "official_sample_submission.csv"),
+)
+TEST_JSON = os.getenv(
+    "TEST_JSON",
+    str(_ROOT / "data" / "Phase_2" / "test_official_track_b.json"),
+)
 # Optional: CSV with columns ID,Track A — fills Track A for leaderboard rows (main.py only solves Track B).
 TRACK_A_CSV = os.getenv("TRACK_A_CSV", "").strip()
 
